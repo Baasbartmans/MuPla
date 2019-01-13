@@ -9,9 +9,6 @@ const char *password = "12345678";
 int buttonOnePin = 5;
 int buttonTwoPin = 4;
 
-String sendback;
-char *intStr = "";
-
 //MVC controllers
 void ButtonOne() {
   server.send(200, "text/plain", digitalRead(buttonOnePin) == LOW ? "true" : "false");
